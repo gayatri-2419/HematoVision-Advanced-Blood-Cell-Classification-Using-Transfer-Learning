@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HematoVision | Blood Cell Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Background Layers -->
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+
+    <!-- Main Card -->
+    <div class="container">
+
+        <h1>🩸 HematoVision</h1>
+
+        <p class="tagline">
+            Advanced Blood Cell Classification Using Transfer Learning
+        </p>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h3>About</h3>
+            <p>
+                HematoVision uses transfer learning on 12,000 annotated blood cell images 
+                to accurately classify eosinophils, lymphocytes, monocytes, and neutrophils.
+            </p>
+        </div>
+
+        <!-- Prediction Section -->
+        <div class="prediction-description">
+            <h3>Prediction</h3>
+            <p>
+                Upload a microscopic blood sample image to receive fast and reliable 
+                AI-powered classification for efficient medical analysis.
+            </p>
+        </div>
+
+        <!-- Upload Form -->
+        <form action="/" method="post" enctype="multipart/form-data">
+
+            <div class="file-input-wrapper">
+                <button type="button" class="file-btn">
+                    Choose Blood Sample
+                </button>
+                <input type="file" name="file" required>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Analyze Sample
+            </button>
+
+        </form>
+
+        <div class="footer">
+            Powered by Artificial Intelligence & Machine Learning
+        </div>
+
+    </div>
+
+</body>
+</html>

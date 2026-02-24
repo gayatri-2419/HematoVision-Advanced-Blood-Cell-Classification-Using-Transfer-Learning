@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HematoVision: Prediction Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body>
+
+    <!-- Background Layers -->
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="container">
+
+        <h1>🧬 HematoVision Result</h1>
+
+        <div class="result-section">
+
+            <h2>Predicted Blood Cell Type</h2>
+
+            <div class="prediction-text">
+                {{ class_label }}
+            </div>
+
+            {% if img_data %}
+                <img src="data:image/png;base64,{{ img_data }}" 
+                     alt="Uploaded Blood Cell" 
+                     class="uploaded-image">
+            {% endif %}
+
+        </div>
+
+        <a href="/" class="back-link">🔁 Upload Another Image</a>
+
+    </div>
+
+</body>
+</html>
